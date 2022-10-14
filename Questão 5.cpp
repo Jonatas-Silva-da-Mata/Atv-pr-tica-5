@@ -4,16 +4,15 @@
   int main(){
   	setlocale(LC_ALL, "Portuguese_Brazil");
   	
-  	float dinheiro, quantidade, valor, troco;
-  	printf("Maquina de café\n\n");
+  	int dinheiro, troco;
+  	printf("Maquina de cafÃ©\n\n");
   	
-  	printf("Informe o valor da sua nota: ");
-  	scanf("%f", &dinheiro);
+  	printf("Coloque o dinheiro: ");
+  	scanf("%d", &dinheiro);
   	
-  	valor = dinheiro / 5;
-  	troco = valor % dinheiro;
-  	
-  	printf("O total do seu café deu %.00f\n Troco perdido: %.00f", valor, troco);
+  	if (dinheiro % 5 != 0){
+  		printf("Valor inavÃ¡lido.");
+	  }
   	
   	return 0;
   }
